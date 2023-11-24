@@ -1,3 +1,4 @@
+//Esercizio EXTRA 2
 let destination = document.querySelectorAll(".card");
 let counter = document.querySelector(".counter");
 
@@ -5,8 +6,11 @@ function countVisibleCards() {
   let count = 0;
 
   for (let i = 0; i < destination.length; i++) {
-    if (!destination[i].closest(".container").classList.contains('d-none')) {
+    if (destination) {
       count++;
+    }
+    if(window.matchMedia("(max-width: 425px)").matches && destination[i].closest(".container").classList.contains('d-none')){
+        count--
     }
   }
 
@@ -15,3 +19,6 @@ function countVisibleCards() {
 
 countVisibleCards();
 
+
+window.addEventListener('resize', countVisibleCards);
+    
