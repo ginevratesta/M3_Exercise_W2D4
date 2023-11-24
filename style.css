@@ -31,6 +31,12 @@ nav :is(a.navbar-brand, a.nav-link, ul.navbar-nav li.nav-item a.nav-link) {
     height: 200px;
 }
 
+.rounded-circle.img-fluid{
+    aspect-ratio:1/1;
+    object-fit: cover;
+    width: 300px;
+}
+
 
 
 
