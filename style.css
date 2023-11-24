@@ -32,4 +32,15 @@ nav :is(a.navbar-brand, a.nav-link, ul.navbar-nav li.nav-item a.nav-link) {
 }
 
 
+
+
+
+
+
+footer{
+    -webkit-box-shadow: 0px -7px 19px 0px rgba(0,4,133,0.26); 
+box-shadow: 0px -7px 19px 0px rgba(0,4,133,0.26);
+}
+
+
   

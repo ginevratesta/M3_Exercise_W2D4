@@ -1,5 +1,5 @@
 //Esercizio EXTRA 2
-let destination = document.querySelectorAll(".card");
+let destination = document.querySelectorAll(".card-counter");
 let counter = document.querySelector(".counter");
 
 function countVisibleCards() {
