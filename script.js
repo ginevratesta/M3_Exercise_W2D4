@@ -258,8 +258,6 @@ window.addEventListener("resize", countVisibleCards);
 const moreOp = document.querySelector("#better");
 const clickMe = document.querySelector("#clickMe");
 
-
-
 function betterOp() {
   moreOp.innerHTML = `<div class="container p-5">
   <div class="row">
@@ -277,7 +275,5 @@ function betterOp() {
 clickMe.addEventListener("click", betterOp);
 
 function setGoBack() {
-  window.location.reload(); 
+  window.location.reload();
 }
-
-
