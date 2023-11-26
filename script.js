@@ -156,7 +156,7 @@ const summerOffers = document.querySelector("#summerOffers");
 
 for (let i = 0; i < summer.length; i++) {
   summerOffers.innerHTML += `
-<div class="col-6 col-sm-6 col-md-4 col-lg-2 shadow-lg p-3 mb-5 bg-body-tertiary">
+<div class="col-6 col-sm-6 col-md-4 col-lg-2 shadow-lg p-3 bg-body-tertiary">
 <div class="card h-100 card-counter">
   <img
     src="${summer[i].image}"
@@ -229,8 +229,8 @@ for (let i = 0; i < carousel.length; i++) {
 carouselContainer.innerHTML = carouselItems;
 
 //Esercizio EXTRA 2
-let destination = document.querySelectorAll(".card-counter");
-let counter = document.querySelector(".counter");
+const destination = document.querySelectorAll(".card-counter");
+const counter = document.querySelector(".counter");
 
 function countVisibleCards() {
   let count = 0;
@@ -253,3 +253,35 @@ function countVisibleCards() {
 countVisibleCards();
 
 window.addEventListener("resize", countVisibleCards);
+
+//Esercizio EXTRA 5
+const moreOp = document.querySelector("#better");
+const clickMe = document.querySelector("#clickMe");
+const originalContent = moreOp.innerHTML; 
+
+function betterOp() {
+  moreOp.innerHTML = `<div class="container p-5">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="d-flex justify-content-center">
+          <img class="py-4" src="./assets/sad-cat.png" alt="pic" style="width:30%; height:30%;"/>
+        </div>
+        <p class="text-white p-2">There's no better options than these</p>
+        <p class="text-white fs-3">Go Cry About It</p>
+        <button id="go-back" class="btn btn-warning text-white">Go back</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function goBack() {
+  moreOp.innerHTML = originalContent; 
+}
+
+clickMe.addEventListener("click", betterOp);
+
+document.addEventListener("click", function (event) {
+  if (event.target && event.target.id === "go-back") {
+    goBack();
+  }
+});
