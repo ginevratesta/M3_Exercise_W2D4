@@ -83,17 +83,30 @@
 
     <div id="weekly" class="container py-5">
       <h2 class="text-warning">WEEKLY OFFERS</h2>
-      <div class="row gy-4" id="first-row"></div>
+      <div class="collapse show" id="collapse-weekly">
+      <div class="row gy-4" id="first-row">
+      </div>
+      </div>
+      <button class="btn btn-warning text-white m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-weekly" aria-expanded="true" aria-controls="collapseExample">
+        WEEKLY
+      </button>
     </div>
 
-    <div id="summer" class="container pt-5">
+    <div id="summer" class="container py-5">
       <h3 class="text-warning">WELCOME SUMMER</h3>
-      <div class="row gy-4" id="summerOffers"></div>
+      <div class="collapse show" id="collapse-summer">
+      <div class="row gy-4" id="summerOffers">
+      </div>
+      </div>
+      <button class="btn btn-warning text-white m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-summer" aria-expanded="true" aria-controls="collapseExample">
+        SUMMER
+      </button>
     </div>
 
     <div class="container py-5 d-none d-md-block">
       <h3 id="daily" class="text-warning">DAILY OFFER</h3>
       <div class="card h-100 card-counter w-100 mb-3">
+        <div class="collapse show" id="collapse-daily">
         <div class="row g-0">
           <div class="col-md-8">
             <img
@@ -127,10 +140,20 @@
         </div>
       </div>
     </div>
+      <button class="btn btn-warning text-white m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-daily" aria-expanded="true" aria-controls="collapseExample">
+        DAILY
+      </button>
+    </div>
 
     <div id="last-minute" class="container py-5">
       <h3 class="text-warning">LAST MINUTE</h3>
-      <div class="row" id="lastMin"></div>
+      <div class="collapse show" id="collapse-last">
+      <div class="row" id="lastMin">
+      </div>
+      </div>
+      <button class="btn btn-warning text-white m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-last" aria-expanded="true" aria-controls="collapseExample">
+        LAST MINUTE
+      </button>
     </div>
 
     <div class="container py-5">
@@ -140,6 +163,7 @@
         data-bs-ride="carousel"
       >
         <h3 class="text-warning">TESTIMONIAL</h3>
+        <div class="collapse show" id="collapse-testimonial">
         <div class="carousel-inner ps-5" id="carousel"></div>
         <button
           class="carousel-control-prev"
@@ -160,6 +184,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    </div>
+      <button class="btn btn-warning text-white m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-testimonial" aria-expanded="true" aria-controls="collapseExample">
+        TESTIMONIAL
+      </button>
     </div>
 
     <p class="counter text-white text-center p-2"></p>
