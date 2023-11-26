@@ -257,31 +257,27 @@ window.addEventListener("resize", countVisibleCards);
 //Esercizio EXTRA 5
 const moreOp = document.querySelector("#better");
 const clickMe = document.querySelector("#clickMe");
-const originalContent = moreOp.innerHTML; 
+
+
 
 function betterOp() {
   moreOp.innerHTML = `<div class="container p-5">
-    <div class="row">
-      <div class="col-12 text-center">
-        <div class="d-flex justify-content-center">
-          <img class="py-4" src="./assets/sad-cat.png" alt="pic" style="width:30%; height:30%;"/>
-        </div>
-        <p class="text-white p-2">There's no better options than these</p>
-        <p class="text-white fs-3">Go Cry About It</p>
-        <button id="go-back" class="btn btn-warning text-white">Go back</button>
-      </div>
-    </div>
+  <div class="row">
+  <div class="col-12 text-center">
+  <div class="d-flex justify-content-center">
+  <img class="py-4" src="./assets/sad-cat.png" alt="pic" style="width:30%; height:30%;"/>
+  </div>
+  <p class="text-white p-2">There's no better options than these</p>
+  <p class="text-white fs-3">Go Cry About It</p>
+  <button onclick="setGoBack()" id="clickMe" class="btn btn-warning text-white">Go back</button>
+  </div>
+  </div>
   </div>`;
 }
-
-function goBack() {
-  moreOp.innerHTML = originalContent; 
-}
-
 clickMe.addEventListener("click", betterOp);
 
-document.addEventListener("click", function (event) {
-  if (event.target && event.target.id === "go-back") {
-    goBack();
-  }
-});
+function setGoBack() {
+  window.location.reload(); 
+}
+
+
